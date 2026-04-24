@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="O1nO72cnQt0Pnc1jPgyKlhX7JpKMuz6I90Bd7F5qyYs" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Jane Care & Home Support Services | Professional Home Care Lagos</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #F0F7F4;
+  color: #1A202C;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2C7A7B;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1A202C;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2C7A7B;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2C7A7B 0%, #1e5e5f 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 0 0 50px 50px;
+}
+
+.hero img {
+  width: 120px;
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: white;
+  color: #2C7A7B;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2C7A7B;
+}
+
+/* About Us */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  background: white;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.about-text {
+  flex: 1.5;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #4A5568;
+}
+
+.about-text h3 {
+  color: #2C7A7B;
+  margin: 20px 0 10px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.service-card h3 {
+  padding: 15px 15px 5px;
+  color: #2C7A7B;
+}
+
+.service-card .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2C7A7B;
+  padding: 10px;
+}
+
+.service-card .price small {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #718096;
+}
+
+.service-card p {
+  padding: 0 15px 15px;
+  color: #4A5568;
+}
+
+.service-card .service-btn {
+  display: inline-block;
+  background: #2C7A7B;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.service-card .service-btn:hover {
+  background: #1e5e5f;
+}
+
+/* Contact Section */
+.contact-section {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-info-item {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background: #F0F7F4;
+  border-radius: 20px;
+}
+
+.contact-info-item a {
+  color: #2C7A7B;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #CBD5E0;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  border-radius: 20px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2C7A7B;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2C7A7B;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #1e5e5f;
+}
+
+/* Address & Map */
+.address-section {
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.address-info {
+  flex: 1;
+}
+
+.address-info h3 {
+  color: #2C7A7B;
+  margin-bottom: 15px;
+}
+
+.address-info p {
+  margin-bottom: 10px;
+}
+
+.map-link {
+  display: inline-block;
+  background: #E67E22;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.map-link:hover {
+  background: #D35400;
+}
+
+.map-container {
+  flex: 1;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Footer */
+footer {
+  background: #1A202C;
+  color: #CBD5E0;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  z-index: 99;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  max-width: 400px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #2C7A7B;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+}
+
+.modal-content button {
+  background: #2C7A7B;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+  .contact-info {
+    flex-direction: column;
+  }
+  .address-section {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container navbar">
+<div class="logo">
+<img src="logo.png" alt="Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%232C7A7B%22/%3E%3Ctext x=%2250%22 y=%2265%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22%3EJC%3C/text%3E%3C/svg%3E'">
+<span>Jane Care & Home Support</span>
+</div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="blog.html">Blog</a></li>
+</ul>
+</div>
+</header>
+
+<main>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+<img src="logo.png" alt="Jane Care Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%232C7A7B%22/%3E%3Ctext x=%2250%22 y=%2265%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22%3EJC%3C/text%3E%3C/svg%3E'">
+<h1>Jane Care & Home Support Services</h1>
+<p>Compassionate, Professional Home Care in Lagos</p>
+<a href="tel:+2348034495175" class="btn btn-primary">📞 Call Now: 0803 449 5175</a>
+<a href="https://wa.me/2348034495175" class="btn btn-outline">💬 WhatsApp: 0803 449 5175</a>
+</section>
+
+<!-- About Us -->
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Us</h2>
+<div class="about-content">
+<div class="about-text">
+<p><strong>Jane Care & Home Support Services</strong> provides compassionate, professional in-home care for seniors, individuals with disabilities, and post-surgery patients in Lagos.</p>
+<p>We create personalized care plans and match you with vetted, trained caregivers who treat your loved ones like family.</p>
+<h3>✨ Why Choose Us</h3>
+<p>✅ Background-checked caregivers<br>✅ 24/7 availability<br>✅ Personalized care plans<br>✅ Regular family updates</p>
+</div>
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1576765608535-6f04d6a57b9a?auto=format&fit=crop&w=800&q=80" alt="Caregiver with senior">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services with Prices -->
+<section id="services">
+<div class="container">
+<h2 class="section-title">Our Services & Pricing</h2>
+<div class="services-grid">
+
+<div class="service-card">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Personal Care" onclick="showModal('Basic Care','Personal care including bathing, dressing, grooming, and mobility support. Perfect for seniors needing occasional help.','₦20,000 per visit (3-4 hours)')">
+<h3>🛁 Basic Care</h3>
+<div class="price">₦20,000 <small>/ visit</small></div>
+<p>Personal care, companionship, light housekeeping</p>
+<a href="tel:+2348034495175" class="service-btn">📞 Call to Book</a>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Companion Care" onclick="showModal('Standard Care','Full-day care including meals, medication tracking, errands, and transportation.','₦30,000 per day (up to 10 hours)')">
+<h3>👥 Standard Care</h3>
+<div class="price">₦30,000 <small>/ day</small></div>
+<p>Full-day care, meals, medication reminders</p>
+<a href="tel:+2348034495175" class="service-btn">📞 Call to Book</a>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/6646865/pexels-photo-6646865.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Live-In Care" onclick="showModal('24/7 Live-In Care','Round-the-clock care with a caregiver who stays in your home. Ideal for dementia or constant supervision.','₦250,000 per month')">
+<h3>🏠 24/7 Live-In Care</h3>
+<div class="price">₦250,000 <small>/ month</small></div>
+<p>Round-the-clock support. Caregiver stays at home.</p>
+<a href="tel:+2348034495175" class="service-btn">📞 Call to Book</a>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Live-In Nurse" onclick="showModal('Live-In Nurse (RN)','Registered Nurse in your home 24/7. Includes wound care, vitals, medication, post-surgery care.','₦500,000 per month')">
+<h3>🩺 Live-In Nurse (RN)</h3>
+<div class="price">₦500,000 <small>/ month</small></div>
+<p>Registered Nurse living in your home 24/7.</p>
+<a href="tel:+2348034495175" class="service-btn">📞 Call to Book</a>
+</div>
+
+</div>
+
+<!-- ONLINE SERVICES SECTION -->
+<div style="margin-top: 60px;">
+<h2 class="section-title" style="color:#2C7A7B;">💻 Online Services</h2>
+<div class="services-grid">
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Virtual Consultation" onclick="showModal('Online Consultation','Speak with our care experts from the comfort of your home. Get personalized care recommendations.','₦10,000 per session')">
+<h3>💬 Virtual Consultation</h3>
+<div class="price">₦10,000 <small>/ session</small></div>
+<p>Talk to our care specialists online</p>
+<a href="https://wa.me/2348034495175" class="service-btn">📞 Book Online</a>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Medication Management" onclick="showModal('Medication Management','Online medication tracking, reminders, and coordination with your pharmacy.','₦15,000 per month')">
+<h3>💊 Medication Management</h3>
+<div class="price">₦15,000 <small>/ month</small></div>
+<p>Track medications, get reminders online</p>
+<a href="https://wa.me/2348034495175" class="service-btn">📞 Book Online</a>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/6646813/pexels-photo-6646813.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Family Portal" onclick="showModal('Family Portal','24/7 online access to care updates, photos, and reports about your loved one.','₦5,000 per month')">
+<h3>👨‍👩‍👧‍👦 Family Portal Access</h3>
+<div class="price">₦5,000 <small>/ month</small></div>
+<p>Real-time updates on your loved one's care</p>
+<a href="https://wa.me/2348034495175" class="service-btn">📞 Book Online</a>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wellness Check" onclick="showModal('Weekly Wellness Check','Regular online check-ins to monitor health, mood, and well-being.','₦20,000 per month')">
+<h3>❤️ Weekly Wellness Check</h3>
+<div class="price">₦20,000 <small>/ month</small></div>
+<p>Regular virtual wellness assessments</p>
+<a href="https://wa.me/2348034495175" class="service-btn">📞 Book Online</a>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Contact Us -->
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+<div class="contact-section">
+
+<div class="contact-info">
+<div class="contact-info-item">
+<p>📞 <strong>Phone</strong></p>
+<a href="tel:+2348034495175">0803 449 5175</a>
+</div>
+<div class="contact-info-item">
+<p>💬 <strong>WhatsApp</strong></p>
+<a href="https://wa.me/2348034495175">0803 449 5175</a>
+</div>
+<div class="contact-info-item">
+<p>✉️ <strong>Email</strong></p>
+<a href="mailto:janeadighibe22@gmail.com">janeadighibe22@gmail.com</a>
+</div>
+</div>
+
+<form id="contactForm">
+<div class="form-group">
+<input type="text" id="name" placeholder="Your Full Name" required>
+</div>
+<div class="form-group">
+<input type="email" id="email" placeholder="Your Email Address" required>
+</div>
+<div class="form-group">
+<input type="tel" id="phone" placeholder="Your Phone Number">
+</div>
+<div class="form-group">
+<textarea id="message" rows="4" placeholder="Your Message / Which service are you interested in?" required></textarea>
+</div>
+<button type="submit" class="submit-btn">📧 Send Message</button>
+</form>
+
+<!-- Address & Google Map -->
+<div class="address-section">
+<div class="address-info">
+<h3>📍 Our Office Address</h3>
+<p><strong>Jane Care & Home Support Services</strong><br>
+No 5 Niri Orilara, Off Grandmate School,<br>
+Ago Palace Way, Okota, Lagos, Nigeria.</p>
+<p><strong>Office Hours:</strong> Monday–Saturday: 9am – 6pm<br>
+<strong>Care Services:</strong> Available 24/7</p>
+<a href="https://www.google.com/maps/search/?api=1&query=No+5+Niri+Orilara+off+Grandmate+School+Ago+Palace+Way+Okota+Lagos" target="_blank" class="map-link">🗺️ Open in Google Maps</a>
+</div>
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.956876729382!2d3.295918073679827!3d6.502476793526869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8f2c5e3e1a6b%3A0x5e3b3e5c7f8c4b3a!2sOkota%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Jane Care & Home Support Services — Compassionate Care, Right at Your Home.</p>
+<p>📍 No 5 Niri Orilara, Off Grandmate School, Ago Palace Way, Okota, Lagos</p>
+<p>📞 0803 449 5175 | ✉️ janeadighibe22@gmail.com</p>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/2348034495175" class="whatsapp-btn" target="_blank">💬</a>
+
+<!-- Modal -->
+<div id="serviceModal" class="modal">
+<div class="modal-content">
+<h3 id="modalTitle"></h3>
+<p id="modalDesc"></p>
+<p id="modalPrice" style="color:#2C7A7B; font-weight:bold; font-size:1.2rem;"></p>
+<button onclick="closeModal()">Close</button>
+</div>
+</div>
+
+<script>
+// Modal Function
+function showModal(title, description, price) {
+    document.getElementById('modalTitle').innerHTML = title;
+    document.getElementById('modalDesc').innerHTML = description;
+    document.getElementById('modalPrice').innerHTML = "💰 " + price;
+    document.getElementById('serviceModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('serviceModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target === document.getElementById('serviceModal')) {
+        closeModal();
+    }
+}
+
+// Contact Form Handler
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    if(!name || !email || !message) {
+        alert('❌ Please fill all required fields.');
+        return;
+    }
+    if(!email.includes('@')) {
+        alert('❌ Please enter a valid email address.');
+        return;
+    }
+    
+    alert('✅ Thank you ' + name + '! Your message has been received. We will respond within 24 hours.');
+    this.reset();
+});
+
+// Smooth Scroll
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if(href.startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+console.log('Jane Care Website - Ready! WhatsApp: 08034495175');
+</script>
+
+</body>
+</html>
