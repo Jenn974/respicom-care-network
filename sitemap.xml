@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://janecare.netlify.app/</loc></url>
-  <url><loc>https://janecare.netlify.app/blog.html</loc></url>
-  <url><loc>https://janecare.netlify.app/post1.html</loc></url>
+  <url>
+    <loc>https://jenn974.github.io/respicom-care-network/</loc>
+  </url>
+  <url>
+    <loc>https://jenn974.github.io/respicom-care-network/blog.html</loc>
+  </url>
+  <url>
+    <loc>https://jenn974.github.io/respicom-care-network/post1.html</loc>
+  </url>
 </urlset>
