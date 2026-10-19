@@ -1,11 +1,383 @@
 
-<nav aria-label="Main navigation">
-  <a href="#home">Home</a>
-  <a href="#care">Care</a>
-  <a href="#services">Services</a>
-  <a href="blog.html">Blog</a>
-  <a href="careers.html">Careers</a>
-  <a href="#about">About</a>
-  <a href="#ai-assistant">AI Assistant</a>
-  <a href="#contact">Contact</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Helpful articles from Respicom Care Network on home care, family support, caregiver training, care coordination and healthcare technology.">
+  <title>Blog | Respicom Care Network</title>
+
+  <style>
+    :root {
+      --blue: #0878B9;
+      --navy: #073B63;
+      --teal: #13A89E;
+      --light: #F3F8FB;
+      --white: #FFFFFF;
+      --text: #344454;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--white);
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #e5edf2;
+      padding: 16px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: white;
+      padding: 65px 6%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: auto;
+      padding: 45px 6% 65px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro h2 {
+      color: var(--navy);
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .article {
+      border: 1px solid #e1eaf0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 18px rgba(7, 59, 99, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-banner {
+      background: var(--light);
+      color: var(--blue);
+      min-height: 125px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+    }
+
+    .article-content {
+      padding: 23px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .article h3 {
+      color: var(--navy);
+      margin: 0 0 10px;
+      line-height: 1.4;
+    }
+
+    .article p {
+      margin-top: 0;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: auto;
+      padding-top: 10px;
+      color: var(--blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .read-more:hover {
+      color: var(--teal);
+    }
+
+    .contact-box {
+      margin-top: 45px;
+      padding: 30px;
+      border-radius: 14px;
+      background: var(--light);
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      color: var(--navy);
+    }
+
+    .button {
+      display: inline-block;
+      margin: 8px 5px;
+      padding: 12px 20px;
+      border-radius: 7px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button.whatsapp {
+      background: #128C7E;
+    }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 30px 6%;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 48px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a class="brand" href="index.html">
+      <img src="respicom-logo.png" alt="Respicom Care Network logo">
+      <span>RESPICOM CARE NETWORK</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#care">Care</a>
+      <a href="index.html#services">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#ai-assistant">AI Assistant</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Care, Knowledge & Support</h1>
+    <p>
+      Practical information to help families, caregivers and care providers
+      make informed decisions about care, wellbeing and support.
+    </p>
+  </section>
+
+  <main>
+    <section class="intro">
+      <h2>Latest Articles & Helpful Resources</h2>
+      <p>
+        Explore our introductory guides to home care, caregiver support,
+        family wellbeing and digital healthcare solutions.
+      </p>
+    </section>
+
+    <section class="articles">
+
+      <article class="article">
+        <div class="article-banner" aria-hidden="true">♡</div>
+        <div class="article-content">
+          <h3>What Is Home Care and Who Can Benefit?</h3>
+          <p>
+            Learn what home care can involve, who may benefit from support
+            at home and what families should consider when exploring care options.
+          </p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-banner" aria-hidden="true">✚</div>
+        <div class="article-content">
+          <h3>How Families Can Prepare for Care at Home</h3>
+          <p>
+            Consider safety, daily routines, communication and the practical
+            arrangements that can help families prepare for care at home.
+          </p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-banner" aria-hidden="true">♧</div>
+        <div class="article-content">
+          <h3>Supporting Caregivers and Preventing Burnout</h3>
+          <p>
+            Explore practical ways to share responsibilities, seek support
+            and make time for rest while caring for another person.
+          </p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-banner" aria-hidden="true">◎</div>
+        <div class="article-content">
+          <h3>How Technology Can Support Care Coordination</h3>
+          <p>
+            Discover how digital tools, clear communication and responsible
+            use of technology can help organize care-related enquiries and tasks.
+          </p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-banner" aria-hidden="true">⌂</div>
+        <div class="article-content">
+          <h3>Choosing a Care Support Service: Questions to Ask</h3>
+          <p>
+            Learn which questions families can ask about services, staff,
+            communication, safeguarding and the scope of care provided.
+          </p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-banner" aria-hidden="true">✧</div>
+        <div class="article-content">
+          <h3>Understanding AI and Digital Support in Healthcare</h3>
+          <p>
+            Understand how digital assistants may help with general enquiries
+            while keeping personal information and professional care decisions protected.
+          </p>
+          <a class="read-more" href="post1.html">Read article →</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="contact-box">
+      <h2>Need More Information?</h2>
+      <p>
+        Contact Respicom Care Network to enquire about our care support,
+        caregiver services and digital healthcare offerings.
+      </p>
+
+      <a class="button whatsapp"
+         href="https://wa.me/2349067366184?text=Hello%20Respicom%20Care%20Network%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+         target="_blank" rel="noopener noreferrer">
+        Enquire on WhatsApp
+      </a>
+
+      <a class="button" href="tel:+2349067366184">
+        Call 0906 736 6184
+      </a>
+
+      <p>
+        Email:
+        <a href="mailto:respicomglobalservice@gmail.com">
+          respicomglobalservice@gmail.com
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>RESPICOM CARE NETWORK</strong></p>
+    <p>Compassionate Care. Stronger Families. Smarter Support.</p>
+
+    <p>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </p>
+
+    <p>&copy; <span id="year"></span> Respicom Care Network. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
