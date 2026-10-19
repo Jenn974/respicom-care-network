@@ -1,10 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Respicom Care Network offers compassionate care support, healthcare coordination, AI agent services and digital care solutions.">
-  <title>Respicom Care Network | Compassionate Care & AI Services</title>
+
+  <title>Respicom Care Network | Family Care, Home Care & AI Services</title>
+
+  <meta name="description" content="Respicom Care Network offers family care consultancy, home care services, caregiver support and training, care provider support, family welfare guidance, adoption journey guidance, AI agent services and digital healthcare solutions.">
+
+  <meta name="theme-color" content="#073B63">
 
   <style>
     :root {
@@ -23,6 +28,11 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
@@ -35,8 +45,11 @@
     }
 
     header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: white;
-      padding: 16px 7%;
+      padding: 12px 7%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -45,26 +58,49 @@
       box-shadow: 0 2px 12px #073b6310;
     }
 
-    .logo {
-      color: var(--dark-blue);
-      font-size: 22px;
-      font-weight: bold;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
     }
 
-    .logo span {
+    .brand img {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      color: var(--dark-blue);
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .brand-name span {
+      display: block;
       color: var(--teal);
+      font-size: 13px;
+      letter-spacing: 1.4px;
+      margin-top: 4px;
     }
 
     nav {
       display: flex;
-      gap: 18px;
+      gap: 17px;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     nav a {
       color: var(--dark-blue);
       font-size: 14px;
       font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--teal);
     }
 
     .hero {
@@ -77,6 +113,17 @@
       align-items: center;
     }
 
+    .eyebrow {
+      display: inline-block;
+      background: #ffffff18;
+      border: 1px solid #ffffff50;
+      padding: 7px 13px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
     .hero h1 {
       font-size: clamp(32px, 5vw, 52px);
       line-height: 1.15;
@@ -85,7 +132,7 @@
 
     .hero p {
       font-size: 18px;
-      max-width: 650px;
+      max-width: 680px;
       margin-bottom: 28px;
       color: #E8F6FF;
     }
@@ -99,7 +146,11 @@
     }
 
     .hero-card .symbol {
-      font-size: 54px;
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero-card h2 {
       margin-bottom: 10px;
     }
 
@@ -107,6 +158,13 @@
       color: var(--muted);
       font-size: 15px;
       margin: 10px 0 0;
+    }
+
+    .hero-card ul {
+      padding-left: 20px;
+      margin-top: 15px;
+      color: var(--text);
+      font-size: 14px;
     }
 
     .button {
@@ -119,6 +177,12 @@
       margin: 5px 5px 5px 0;
       border: none;
       cursor: pointer;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .button:hover {
+      filter: brightness(0.94);
     }
 
     .button.secondary {
@@ -132,14 +196,15 @@
 
     .section-heading {
       text-align: center;
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto 35px;
     }
 
     .section-heading h2 {
       color: var(--dark-blue);
-      font-size: 32px;
+      font-size: clamp(27px, 4vw, 34px);
       margin-bottom: 12px;
+      line-height: 1.25;
     }
 
     .section-heading p {
@@ -152,7 +217,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
     }
 
@@ -172,11 +237,53 @@
     .service-card h3 {
       color: var(--dark-blue);
       margin-bottom: 10px;
+      line-height: 1.35;
     }
 
     .service-card p {
       color: var(--muted);
       font-size: 15px;
+    }
+
+    .service-card a {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: bold;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    .about-section {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 950px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .about-box {
+      background: var(--light-blue);
+      border-radius: 14px;
+      padding: 26px;
+    }
+
+    .about-box h3 {
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+    }
+
+    .about-box p {
+      color: var(--muted);
+    }
+
+    .about-box ul {
+      padding-left: 20px;
+      color: var(--muted);
     }
 
     .ai-section {
@@ -197,8 +304,12 @@
       margin-bottom: 10px;
     }
 
+    .ai-panel > p {
+      color: var(--muted);
+    }
+
     .chat-box {
-      height: 280px;
+      height: 300px;
       overflow-y: auto;
       background: white;
       border: 1px solid #D4E4EC;
@@ -213,6 +324,7 @@
       margin-bottom: 12px;
       max-width: 90%;
       white-space: pre-wrap;
+      overflow-wrap: anywhere;
       font-size: 14px;
     }
 
@@ -241,6 +353,27 @@
       font-size: 15px;
     }
 
+    .quick-questions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .quick-questions button {
+      padding: 8px 12px;
+      border: 1px solid #BCD5E2;
+      border-radius: 20px;
+      background: white;
+      color: var(--dark-blue);
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .quick-questions button:hover {
+      border-color: var(--teal);
+    }
+
     .contact {
       background: var(--dark-blue);
       color: white;
@@ -248,13 +381,34 @@
     }
 
     .contact h2 {
-      font-size: 32px;
+      font-size: clamp(28px, 4vw, 34px);
       margin-bottom: 12px;
     }
 
     .contact p {
       margin-bottom: 20px;
       color: #E8F6FF;
+    }
+
+    .contact-details {
+      margin: 24px auto 0;
+      max-width: 600px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .notice {
+      max-width: 900px;
+      margin: 25px auto 0;
+      padding: 16px;
+      border-radius: 10px;
+      background: #ffffff12;
+      color: #E8F6FF;
+      font-size: 13px;
     }
 
     footer {
@@ -269,7 +423,7 @@
       position: fixed;
       right: 20px;
       bottom: 20px;
-      z-index: 10;
+      z-index: 110;
       background: #20B86A;
       color: white;
       padding: 13px 18px;
@@ -278,28 +432,47 @@
       box-shadow: 0 5px 18px #0002;
     }
 
-    @media (max-width: 800px) {
+    .floating-whatsapp:hover {
+      background: #159954;
+    }
+
+    @media (max-width: 950px) {
+      header {
+        padding: 12px 5%;
+      }
+
       .hero {
         grid-template-columns: 1fr;
-        padding: 55px 6%;
+        padding: 60px 6%;
       }
 
       .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      header {
-        padding: 16px 5%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 550px) {
-      .grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 650px) {
+      header {
+        justify-content: center;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: center;
       }
 
       nav {
+        justify-content: center;
         gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .grid,
+      .about-content {
+        grid-template-columns: 1fr;
       }
 
       .chat-controls {
@@ -309,6 +482,21 @@
       section {
         padding: 48px 6%;
       }
+
+      .hero {
+        padding: 48px 6%;
+      }
+
+      .hero-card,
+      .ai-panel {
+        padding: 22px;
+      }
+
+      .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 11px 15px;
+      }
     }
   </style>
 </head>
@@ -316,11 +504,19 @@
 <body>
 
 <header>
-  <a href="#" class="logo">Respicom <span>Care Network</span></a>
-  <nav>
+  <a href="#home" class="brand" aria-label="Respicom Care Network home">
+    <img src="respicom-logo.png" alt="Respicom Care Network logo">
+    <span class="brand-name">
+      RESPICOM
+      <span>CARE NETWORK</span>
+    </span>
+  </a>
+
+  <nav aria-label="Main navigation">
     <a href="#home">Home</a>
     <a href="#services">Services</a>
-    <a href="#ai-assistant">AI Care Assistant</a>
+    <a href="#about">About</a>
+    <a href="#ai-assistant">AI Assistant</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -328,136 +524,298 @@
 <main>
   <section class="hero" id="home">
     <div>
-      <h1>Compassionate Care. Smarter Healthcare Support.</h1>
+      <span class="eyebrow">CARE • CONNECTION • INNOVATION</span>
+
+      <h1>Compassionate Care. Stronger Families. Smarter Support.</h1>
+
       <p>
-        Respicom Care Network combines compassionate care services,
-        healthcare coordination and intelligent digital solutions to
-        help individuals, families and care organisations.
+        Respicom Care Network supports individuals, families and care
+        providers through family care consultancy, home care services,
+        caregiver training, family welfare guidance and responsible
+        digital healthcare solutions.
       </p>
+
       <a class="button" href="#services">Explore Our Services</a>
-      <a class="button secondary" href="#contact">Contact Our Team</a>
+      <a class="button secondary" href="#contact">Speak With Our Team</a>
     </div>
 
     <div class="hero-card">
-      <div class="symbol">✚</div>
+      <div class="symbol" aria-hidden="true">✚</div>
       <h2>Care with Confidence</h2>
       <p>
-        Human-centred support enhanced by responsible technology,
-        accessible communication and smarter service coordination.
+        We bring people, care guidance and practical support together
+        to help families and care organisations navigate their needs.
       </p>
+
+      <ul>
+        <li>Family and home care support</li>
+        <li>Caregiver support and training</li>
+        <li>Family welfare and adoption journey guidance</li>
+        <li>AI agents and digital service solutions</li>
+      </ul>
     </div>
   </section>
 
   <section class="services" id="services">
     <div class="section-heading">
       <h2>Our Services</h2>
-      <p>Care support and digital solutions designed around people and organisations.</p>
+      <p>
+        Practical care support for individuals and families, alongside
+        professional and digital solutions for care providers.
+      </p>
     </div>
 
     <div class="grid">
       <article class="service-card">
-        <div class="icon">🏥</div>
-        <h3>Care Support & Coordination</h3>
-        <p>Support with care enquiries, service coordination and connecting families with appropriate care resources.</p>
+        <div class="icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
+        <h3>Family Care Consultancy</h3>
+        <p>
+          Guidance to help families understand care options, identify
+          support needs, plan care arrangements and make informed
+          decisions for their loved ones.
+        </p>
+        <a href="#contact">Discuss your needs →</a>
       </article>
 
       <article class="service-card">
-        <div class="icon">🤝</div>
+        <div class="icon" aria-hidden="true">🏡</div>
         <h3>Home Care Services</h3>
-        <p>Explore personalised home support options designed to promote comfort, dignity and everyday wellbeing.</p>
+        <p>
+          Support with exploring and coordinating suitable home care
+          arrangements that promote comfort, dignity, safety and
+          everyday wellbeing.
+        </p>
+        <a href="#contact">Enquire about home care →</a>
       </article>
 
       <article class="service-card">
-        <div class="icon">🤖</div>
+        <div class="icon" aria-hidden="true">🎓</div>
+        <h3>Caregiver Support & Training</h3>
+        <p>
+          Guidance, learning and practical support to help caregivers
+          strengthen their care skills, understand responsibilities
+          and provide respectful, person-centred support.
+        </p>
+        <a href="#contact">Ask about caregiver support →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🤝</div>
+        <h3>Support for Care Providers</h3>
+        <p>
+          Support for care organisations with service coordination,
+          communication, operational processes and digital tools that
+          help them manage enquiries and improve service delivery.
+        </p>
+        <a href="#contact">Support for your organisation →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">💙</div>
+        <h3>Family Welfare Guidance</h3>
+        <p>
+          Information and practical guidance to help individuals and
+          families explore welfare resources, care support options
+          and appropriate referral pathways.
+        </p>
+        <a href="#contact">Request guidance →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🌱</div>
+        <h3>Child Adoption Journey Guidance</h3>
+        <p>
+          Support for individuals and families as they navigate the
+          child adoption journey, understand general process
+          requirements and seek to build stable, loving homes.
+        </p>
+        <a href="#contact">Discuss adoption guidance →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🤖</div>
         <h3>AI Agent Services</h3>
-        <p>AI-powered agents to answer enquiries, qualify requests, support customer service and help manage routine business tasks.</p>
+        <p>
+          AI-powered assistants for businesses and care providers to
+          help answer routine enquiries, organise requests, support
+          customer service and streamline everyday workflows.
+        </p>
+        <a href="#contact">Explore AI agent services →</a>
       </article>
 
       <article class="service-card">
-        <div class="icon">💬</div>
+        <div class="icon" aria-hidden="true">💬</div>
         <h3>WhatsApp & Call Support</h3>
-        <p>Make it easier for clients and families to contact our team through WhatsApp or a phone call.</p>
+        <p>
+          Convenient communication channels for service enquiries,
+          care discussions and requests for further information
+          through WhatsApp or telephone.
+        </p>
+        <a href="https://wa.me/2349067366184?text=Hello%20Respicom%20Care%20Network%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+           target="_blank" rel="noopener">Message us on WhatsApp →</a>
       </article>
 
       <article class="service-card">
-        <div class="icon">📅</div>
-        <h3>Appointments & Enquiries</h3>
-        <p>Help visitors find the right contact channel to discuss services, request information or arrange appointments.</p>
+        <div class="icon" aria-hidden="true">⚙️</div>
+        <h3>Digital Healthcare Solutions</h3>
+        <p>
+          Digital tools and workflow support to help care providers
+          improve enquiry handling, appointment requests, information
+          management and communication with clients.
+        </p>
+        <a href="#contact">Discuss digital solutions →</a>
       </article>
+    </div>
+  </section>
 
-      <article class="service-card">
-        <div class="icon">⚙️</div>
-        <h3>Digital Care Solutions</h3>
-        <p>Technology support for care providers seeking better enquiry handling, communication and service workflows.</p>
-      </article>
+  <section class="about-section" id="about">
+    <div class="section-heading">
+      <h2>Supporting People. Strengthening Care.</h2>
+      <p>
+        Our approach combines human-centred guidance with practical
+        coordination and technology that makes accessing support easier.
+      </p>
+    </div>
+
+    <div class="about-content">
+      <div class="about-box">
+        <h3>For Individuals & Families</h3>
+        <p>
+          We help families explore care options, understand available
+          support, navigate family welfare questions and seek guidance
+          during important family care decisions.
+        </p>
+        <br>
+        <p>
+          Every family is different. Contact us to discuss your needs
+          and understand what support or referrals may be appropriate.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h3>For Care Providers & Organisations</h3>
+        <p>
+          We support care providers looking to improve the way they
+          handle enquiries, communicate with clients and coordinate
+          services.
+        </p>
+        <br>
+        <ul>
+          <li>Care service workflow support</li>
+          <li>Caregiver learning and support</li>
+          <li>AI enquiry assistants</li>
+          <li>WhatsApp and digital communication solutions</li>
+          <li>Digital workflow and service coordination tools</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="ai-section" id="ai-assistant">
     <div class="section-heading">
-      <h2>AI Care Assistant</h2>
-      <p>Have a question? Start here for general information about our services.</p>
+      <h2>Meet Our AI Care Assistant</h2>
+      <p>
+        Ask a general question about our services or find out how to
+        contact our team.
+      </p>
     </div>
 
     <div class="ai-panel">
       <h3>Respicom Virtual Assistant</h3>
       <p>
-        Ask about care services, AI agent solutions, contacting our team or making an enquiry.
+        You can ask about family care consultancy, home care, caregiver
+        support, adoption guidance, AI Agent Services or how to contact us.
       </p>
 
-      <div class="chat-box" id="chatBox" aria-live="polite">
+      <div class="chat-box" id="chatBox" aria-live="polite" aria-label="Chat conversation">
         <div class="message bot">
-          Hello and welcome to Respicom Care Network! How can I help you today?
+          Hello and welcome to Respicom Care Network!
 
-          You can ask about our services, contact options or how to make an enquiry.
+          I can help you explore our services and contact options. What would you like to know?
         </div>
       </div>
 
       <form id="chatForm" class="chat-controls">
-        <input id="chatInput" type="text"
+        <input
+          id="chatInput"
+          type="text"
           placeholder="Type your question here..."
-          aria-label="Your question" required>
+          aria-label="Your question"
+          autocomplete="off"
+          required
+        >
         <button class="button" type="submit">Send</button>
       </form>
 
-      <p style="font-size:12px;margin-top:12px;color:#617383;">
-        This demonstration provides automated, predefined replies. It is not
-        connected to a live AI service and does not provide medical advice.
+      <div class="quick-questions" aria-label="Suggested questions">
+        <button type="button" data-question="Tell me about home care services">Home care</button>
+        <button type="button" data-question="What caregiver support and training do you offer?">Caregiver support</button>
+        <button type="button" data-question="Can you guide families through child adoption?">Adoption guidance</button>
+        <button type="button" data-question="Tell me about AI Agent Services">AI Agent Services</button>
+        <button type="button" data-question="How can I contact your team?">Contact details</button>
+      </div>
+
+      <p style="font-size:12px;margin-top:16px;">
+        <strong>Important:</strong> This is a basic demonstration using
+        predefined responses. It is not connected to a live AI model,
+        does not make appointments or send messages automatically, and
+        does not provide medical, legal or emergency advice.
       </p>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <h2>We're Here to Help</h2>
-    <p>Contact Respicom Care Network to discuss care services or digital solutions.</p>
+    <h2>How Can We Support You?</h2>
+    <p>
+      Contact Respicom Care Network to discuss family care, home care,
+      caregiver support, adoption journey guidance or digital solutions.
+    </p>
 
-    <!-- Replace these details if your official contact information changes -->
-    <a class="button" href="https://wa.me/2348034495175" target="_blank" rel="noopener">
+    <a class="button"
+       href="https://wa.me/2349067366184?text=Hello%20Respicom%20Care%20Network%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+       target="_blank"
+       rel="noopener">
       Chat on WhatsApp
     </a>
 
-    <a class="button secondary" href="tel:+2348034495175">
-      Call Our Team
+    <a class="button secondary" href="tel:+2349067366184">
+      Call 0906 736 6184
     </a>
 
-    <p style="margin-top:20px;">
-      Email:
-      <a href="mailto:respicomglobalservice@gmail.com" style="color:white;">
-        respicomglobalservice@gmail.com
-      </a>
-    </p>
+    <div class="contact-details">
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:+2349067366184">0906 736 6184</a>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:respicomglobalservice@gmail.com">
+          respicomglobalservice@gmail.com
+        </a>
+      </p>
+    </div>
+
+    <div class="notice">
+      Adoption-related support is for general guidance and assistance.
+      Formal adoption applications, assessments, approvals and legal
+      decisions must be handled through the relevant authorised
+      authorities and qualified professionals. Our website assistant
+      is not a substitute for qualified medical, legal or social-work advice.
+    </div>
   </section>
 </main>
 
 <footer>
   <p>&copy; <span id="year"></span> Respicom Care Network. All rights reserved.</p>
-  <p>Compassionate Care • Intelligent Support • Better Connections</p>
+  <p>Compassionate Care • Family Support • Digital Innovation</p>
 </footer>
 
 <a class="floating-whatsapp"
-   href="https://wa.me/2348034495175"
-   target="_blank" rel="noopener"
-   aria-label="Contact us on WhatsApp">
+   href="https://wa.me/2349067366184?text=Hello%20Respicom%20Care%20Network%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+   target="_blank"
+   rel="noopener"
+   aria-label="Contact Respicom Care Network on WhatsApp">
   WhatsApp Us
 </a>
 
@@ -479,61 +837,101 @@
   function getReply(question) {
     const q = question.toLowerCase();
 
-    if (q.includes("hello") || q.includes("hi ") || q === "hi") {
-      return "Hello! Welcome to Respicom Care Network. How may we help you?";
+    if (/\b(hello|hi|hey|good morning|good afternoon|good evening)\b/.test(q)) {
+      return "Hello! Welcome to Respicom Care Network. How can we support you today?";
     }
 
-    if (q.includes("whatsapp")) {
-      return "You can reach our team on WhatsApp using the green WhatsApp button on this page.";
+    if (q.includes("adoption") || q.includes("adopt a child")) {
+      return "Respicom Care Network offers general guidance and support for individuals and families navigating the child adoption journey. Formal applications, assessments and approvals must be handled by the relevant authorised authorities. Please contact our team to discuss the kind of guidance you need.";
     }
 
-    if (q.includes("call") || q.includes("phone")) {
-      return "Please select the Call Our Team button on this page to contact us.";
+    if (q.includes("family care") || q.includes("family consultancy")) {
+      return "Our Family Care Consultancy helps families explore care options, understand support needs and plan appropriate care arrangements. Please contact our team to discuss your situation.";
     }
 
     if (q.includes("home care") || q.includes("care service")) {
-      return "We provide information about home care and care coordination options. Please contact our team to discuss your specific needs.";
+      return "We help individuals and families explore home care options and care coordination. Please contact our team to discuss your needs, availability and the type of support you are seeking.";
+    }
+
+    if (q.includes("caregiver") || q.includes("training")) {
+      return "We offer caregiver support and training guidance to help strengthen care skills and promote respectful, person-centred support. Contact us for more information about available options.";
+    }
+
+    if (q.includes("care provider") || q.includes("care organisation")) {
+      return "We support care providers with service coordination, communication, operational workflows and digital tools. Contact us to discuss your organisation's needs.";
+    }
+
+    if (q.includes("family welfare") || q.includes("welfare")) {
+      return "We provide family welfare guidance and information to help people explore relevant support options and referral pathways. Please contact our team for further discussion.";
     }
 
     if (q.includes("ai") || q.includes("agent") || q.includes("automation")) {
-      return "Our AI Agent Services can help organisations automate routine enquiries, customer support and business workflows. Contact our team to discuss your requirements.";
+      return "Our AI Agent Services can help organisations handle routine enquiries, provide first-line information and streamline workflows. Connecting a live AI assistant requires an AI service, secure backend integration and appropriate testing. Contact us to discuss your requirements.";
+    }
+
+    if (q.includes("whatsapp")) {
+      return "You can contact Respicom Care Network directly on WhatsApp using this link: https://wa.me/2349067366184";
+    }
+
+    if (q.includes("call") || q.includes("phone") || q.includes("contact")) {
+      return "You can call us on 0906 736 6184 or email respicomglobalservice@gmail.com. You can also use the WhatsApp button on this page.";
     }
 
     if (q.includes("appointment") || q.includes("book")) {
-      return "Please contact our team by WhatsApp or phone to discuss availability and appointment arrangements.";
+      return "Please contact our team by WhatsApp or phone to discuss your enquiry and any appointment arrangements. This website assistant does not book appointments automatically.";
     }
 
     if (q.includes("price") || q.includes("cost") || q.includes("fee")) {
-      return "Our fees depend on the service required. Please contact our team for information specific to your needs.";
+      return "Fees depend on the service and support required. Please contact our team to enquire about pricing for your specific needs.";
     }
 
-    if (q.includes("emergency") || q.includes("urgent") ||
-        q.includes("chest pain") || q.includes("can't breathe") ||
-        q.includes("cannot breathe")) {
-      return "If this is a medical emergency, contact your local emergency service or go to the nearest emergency department immediately. This assistant cannot assess emergencies.";
+    if (
+      q.includes("emergency") ||
+      q.includes("urgent") ||
+      q.includes("chest pain") ||
+      q.includes("can't breathe") ||
+      q.includes("cannot breathe") ||
+      q.includes("difficulty breathing")
+    ) {
+      return "If someone may be experiencing a medical emergency, contact the appropriate local emergency service or go to the nearest emergency department immediately. This assistant cannot assess emergencies.";
     }
 
-    if (q.includes("medical advice") || q.includes("diagnosis") ||
-        q.includes("medicine") || q.includes("medication") ||
-        q.includes("symptom")) {
-      return "I cannot diagnose conditions or recommend medication. Please speak with a qualified healthcare professional. For urgent symptoms, seek immediate medical care.";
+    if (
+      q.includes("diagnosis") ||
+      q.includes("medicine") ||
+      q.includes("medication") ||
+      q.includes("symptom") ||
+      q.includes("medical advice")
+    ) {
+      return "I cannot diagnose a condition or recommend medication. Please speak with a qualified healthcare professional. For urgent symptoms, seek immediate medical care.";
     }
 
-    return "Thank you for your enquiry. I can provide general information about our services, AI agents and contact options. For a specific request, please contact our team through WhatsApp or phone.";
+    return "Thank you for your enquiry. I can provide general information about family care consultancy, home care, caregiver support, family welfare guidance, adoption journey guidance and AI Agent Services. For personal assistance, contact us on 0906 736 6184 or respicomglobalservice@gmail.com.";
+  }
+
+  function submitQuestion(question) {
+    const cleanQuestion = question.trim();
+
+    if (!cleanQuestion) return;
+
+    addMessage(cleanQuestion, "user");
+
+    chatInput.value = "";
+
+    window.setTimeout(function() {
+      addMessage(getReply(cleanQuestion), "bot");
+    }, 250);
   }
 
   chatForm.addEventListener("submit", function(event) {
     event.preventDefault();
+    submitQuestion(chatInput.value);
+  });
 
-    const question = chatInput.value.trim();
-    if (!question) return;
-
-    addMessage(question, "user");
-    chatInput.value = "";
-
-    window.setTimeout(function() {
-      addMessage(getReply(question), "bot");
-    }, 350);
+  document.querySelectorAll("[data-question]").forEach(function(button) {
+    button.addEventListener("click", function() {
+      submitQuestion(button.getAttribute("data-question"));
+    });
   });
 </script>
 
