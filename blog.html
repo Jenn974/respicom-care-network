@@ -1,79 +1,161 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jane Care – Blog | Home Care Tips Lagos</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#F0F7F4;color:#1A202C;line-height:1.5;}
-.container{max-width:1000px;margin:auto;padding:20px;}
-header{background:white;box-shadow:0 2px 10px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;}
-.navbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:15px 20px;max-width:1200px;margin:auto;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{width:45px;height:45px;object-fit:contain;}
-.logo span{font-weight:bold;color:#2C7A7B;}
-.nav-links{list-style:none;display:flex;gap:20px;}
-.nav-links a{text-decoration:none;color:#1A202C;font-weight:600;}
-.nav-links a:hover{color:#2C7A7B;}
-.hero{background:#2C7A7B;color:white;text-align:center;padding:50px 20px;margin-bottom:30px;}
-.hero h1{font-size:2rem;}
-.blog-posts{background:white;border-radius:24px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
-.post{border-bottom:1px solid #E2E8F0;margin-bottom:25px;padding-bottom:25px;}
-.post h2{color:#2C7A7B;margin-bottom:8px;}
-.post h2 a{text-decoration:none;color:#2C7A7B;}
-.post h2 a:hover{text-decoration:underline;}
-.post-meta{color:#718096;font-size:0.85rem;margin-bottom:10px;}
-.post-summary{color:#4A5568;}
-.read-more{display:inline-block;margin-top:10px;color:#2C7A7B;font-weight:bold;text-decoration:none;}
-.read-more:hover{text-decoration:underline;}
-footer{text-align:center;background:#1A202C;color:#CBD5E0;padding:25px;margin-top:40px;}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:99;}
-.whatsapp:hover{transform:scale(1.05);}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Care resources, family support guidance, home care information and caregiver education from Respicom Care Network.">
+  <title>Care Blog | Respicom Care Network</title>
+  <style>
+    :root {
+      --blue: #0878B9;
+      --navy: #073B63;
+      --teal: #13A89E;
+      --light: #F3F8FC;
+      --white: #FFFFFF;
+      --text: #263747;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--light);
+    }
+    header {
+      background: var(--white);
+      padding: 15px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 12px #073b6312;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .brand img { width: 58px; height: 58px; object-fit: contain; }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav a { color: var(--navy); text-decoration: none; font-weight: 700; }
+    nav a:hover { color: var(--teal); }
+    .hero {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+    .hero h1 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3rem); }
+    .hero p { max-width: 700px; margin: auto; }
+    main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .intro { text-align: center; margin-bottom: 30px; }
+    .article {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 5px 24px #073b6310;
+      border: 1px solid #e1ebf2;
+    }
+    .article h2 { color: var(--navy); margin-top: 0; }
+    .meta { color: #607587; font-size: .92rem; }
+    .read-more {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .read-more:hover { background: var(--navy); }
+    .notice {
+      margin-top: 25px;
+      padding: 20px;
+      background: #e5f6f4;
+      border-left: 4px solid var(--teal);
+      border-radius: 8px;
+    }
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 55px;
+    }
+    footer a { color: white; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; }
+    @media (max-width: 600px) {
+      header { justify-content: center; }
+      nav { justify-content: center; }
+      .article { padding: 20px; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <a class="brand" href="index.html#home">
+      <img src="respicom-logo.png" alt="Respicom Care Network logo">
+      <span>RESPICOM CARE NETWORK</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#care">Care</a>
+      <a href="index.html#services">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-<div class="navbar">
-<div class="logo">
-<img src="logo.png" alt="Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%232C7A7B%22/%3E%3Ctext x=%2250%22 y=%2265%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22%3EJC%3C/text%3E%3C/svg%3E'">
-<span>Jane Care & Home Support</span>
-</div>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="index.html#contact">Contact</a></li>
-</ul>
-</div>
-</header>
+  <section class="hero">
+    <h1>Care Resources &amp; Family Support</h1>
+    <p>Helpful information for individuals, families, caregivers and care providers.</p>
+  </section>
 
-<div class="hero">
-<h1>📝 Jane Care Blog</h1>
-<p>Helpful tips, news, and advice for families and caregivers in Lagos</p>
-</div>
+  <main>
+    <div class="intro">
+      <h2>Welcome to Our Blog</h2>
+      <p>Explore practical information about home care, family wellbeing, caregiving and finding appropriate support.</p>
+    </div>
 
-<div class="container">
-<div class="blog-posts">
-<div class="post">
-<h2><a href="post1.html">5 Signs Your Elderly Parent Needs In‑Home Care</a></h2>
-<div class="post-meta">📅 April 24, 2026 | ✍️ Jane Care Team</div>
-<div class="post-summary">
-<p>Many families in Lagos struggle to know when it’s time to seek professional help. Here are five clear signs that your loved one may benefit from home care – from difficulty with daily tasks to memory issues and social withdrawal.</p>
-</div>
-<a href="post1.html" class="read-more">Read full article →</a>
-</div>
-<!-- Add more posts here by copying the .post div and changing content -->
-</div>
-</div>
+    <article class="article">
+      <p class="meta">Care Education · Home Care</p>
+      <h2>5 Signs Your Elderly Parent May Need In-Home Care</h2>
+      <p>Families may find it difficult to know when an older loved one needs additional support. Changes in daily routines, personal care, mobility or social interaction can be reasons to explore suitable care options.</p>
+      <p>This article discusses five signs to look out for and ways families can start a thoughtful conversation about support.</p>
+      <a class="read-more" href="post1.html">Read the Full Article →</a>
+    </article>
 
-<a href="https://wa.me/2348034495175" class="whatsapp" target="_blank">💬</a>
+    <div class="notice">
+      <strong>Need guidance with care arrangements?</strong>
+      <p>Respicom Care Network provides family care consultancy, home care guidance, caregiver support and information about appropriate referral options.</p>
+      <a class="read-more" href="index.html#contact">Contact Our Team</a>
+    </div>
+  </main>
 
-<footer>
-<p>📍 No 5 Niri Orilara, Off Grandmate School, Ago Palace Way, Okota, Lagos</p>
-<p>📞 0803 449 5175 | ✉️ janeadighibe22@gmail.com</p>
-<p>© 2026 Jane Care & Home Support Services</p>
-</footer>
-
+  <footer>
+    <h2>RESPICOM CARE NETWORK</h2>
+    <p>Compassionate Care. Stronger Families. Smarter Support.</p>
+    <div class="footer-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p>Phone: <a href="tel:+2349067366184">0906 736 6184</a></p>
+    <p>WhatsApp: <a href="https://wa.me/2349067366184">Message us</a></p>
+    <p>Email: <a href="mailto:respicomglobalservice@gmail.com">respicomglobalservice@gmail.com</a></p>
+    <p>&copy; <span id="year"></span> Respicom Care Network. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
