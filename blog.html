@@ -1,162 +1,288 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#073B63">
-  <meta name="description" content="Care education, home care information, family wellbeing and caregiver resources from Respicom Care Network.">
+  <meta name="description" content="Respicom Care Network provides home care support, caregiver guidance, family care consultancy and digital healthcare solutions in Nigeria.">
+  <meta name="theme-color" content="#0878B9">
   <title>Care Blog | Respicom Care Network</title>
-  <link rel="icon" href="respicom-logo.png" type="image/png">
   <style>
     :root {
       --blue: #0878B9;
       --navy: #073B63;
       --teal: #13A89E;
       --light: #F3F8FC;
-      --text: #263747;
-      --muted: #607587;
-      --border: #DFE9F0;
+      --white: #FFFFFF;
+      --text: #263746;
     }
+
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.7; color: var(--text); background: var(--light); }
-    a { color: var(--blue); }
-    header { background: white; box-shadow: 0 2px 12px #073b6314; }
-    .container { width: min(1080px, 92%); margin: auto; }
-    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; padding: 12px 0; }
-    .brand { display: flex; align-items: center; gap: 12px; color: var(--navy); font-weight: 800; text-decoration: none; }
-    .brand img { width: 58px; height: 58px; object-fit: contain; }
-    nav { display: flex; flex-wrap: wrap; gap: 16px; }
-    nav a { color: var(--navy); text-decoration: none; font-weight: 700; }
-    .hero { background: linear-gradient(135deg, var(--navy), var(--blue)); color: white; text-align: center; padding: 62px 20px; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.2; margin: 0 0 14px; }
-    .hero p { max-width: 720px; margin: auto; }
-    main { padding: 42px 0 60px; }
-    .intro { max-width: 760px; margin: 0 auto 30px; text-align: center; }
-    .intro h2 { color: var(--navy); }
-    .article-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-    .article { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 25px; box-shadow: 0 5px 20px #073b6308; }
-    .category { color: #087f77; font-size: .83rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
-    .article h2 { color: var(--navy); font-size: 1.4rem; line-height: 1.35; }
-    .article h2 a { color: inherit; text-decoration: none; }
-    .meta { color: var(--muted); font-size: .9rem; }
-    .read-more { display: inline-block; background: var(--blue); color: white; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-weight: 700; }
-    .notice { background: #e5f6f4; border-left: 4px solid var(--teal); border-radius: 8px; padding: 20px; margin-top: 28px; }
-    footer { background: var(--navy); color: white; padding: 32px 0; }
-    footer a { color: white; }
-    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 25px; }
-    .footer-links { display: grid; gap: 8px; }
-    .copyright { border-top: 1px solid #ffffff35; padding-top: 18px; margin-top: 25px; font-size: .9rem; }
-    @media (max-width: 700px) {
-      .article-list, .footer-grid { grid-template-columns: 1fr; }
-      .nav { justify-content: center; }
-      nav { justify-content: center; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--light);
+    }
+
+    header {
+      background: var(--white);
+      padding: 16px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 12px rgba(7, 59, 99, 0.08);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 19px;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    nav a:hover { color: var(--teal); }
+
+    .hero {
+      padding: 65px 6%;
+      text-align: center;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 5vw, 44px);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 42px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .article {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 5px 22px rgba(7, 59, 99, 0.07);
+    }
+
+    .article h2 {
+      color: var(--navy);
+      line-height: 1.35;
+      font-size: 22px;
+    }
+
+    .meta {
+      color: #657786;
+      font-size: 14px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .services {
+      margin-top: 42px;
+      padding: 28px;
+      background: var(--white);
+      border-left: 5px solid var(--teal);
+      border-radius: 12px;
+    }
+
+    .services h2 { color: var(--navy); }
+
+    .services li { margin-bottom: 8px; }
+
+    .contact {
+      background: var(--navy);
+      color: var(--white);
+      padding: 38px 6%;
+      text-align: center;
+    }
+
+    .contact h2 { margin-top: 0; }
+
+    .contact a {
+      color: var(--white);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #052C49;
+      color: var(--white);
+      text-align: center;
+      padding: 18px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      background: #168B55;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,.18);
     }
   </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="index.html#home">
+  <header>
+    <a class="brand" href="index.html">
       <img src="respicom-logo.png" alt="Respicom Care Network logo">
       <span>RESPICOM CARE NETWORK</span>
     </a>
+
     <nav aria-label="Main navigation">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#care">Care</a>
-      <a href="index.html#services">Services</a>
-      <a href="blog.html">Blog</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Care Blog</a>
+      <a href="index.html#services">Care Services</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <h1>Care Resources &amp; Family Support</h1>
-  <p>Helpful information for individuals, families, caregivers and care providers.</p>
-</section>
+  <section class="hero">
+    <h1>Care, Guidance & Family Support</h1>
+    <p>Compassionate Care. Stronger Families. Smarter Support.</p>
+    <p>Helpful information for families, caregivers and care providers across Nigeria.</p>
+  </section>
 
-<main class="container">
-  <div class="intro">
-    <h2>Welcome to the Respicom Care Network Blog</h2>
-    <p>Explore practical information about home care, family wellbeing, caregiving, adoption journey guidance and digital support.</p>
-  </div>
+  <main>
+    <section class="intro">
+      <h2>Latest Care Articles</h2>
+      <p>Explore practical information to help you make informed care decisions.</p>
+    </section>
 
-  <div class="article-list">
-    <article class="article">
-      <div class="category">Home Care</div>
-      <h2><a href="post1.html">5 Signs Your Elderly Parent May Need In-Home Care</a></h2>
-      <p class="meta">Care education · Respicom Care Network</p>
-      <p>Families may find it difficult to know when an older loved one needs extra support. Learn about changes in everyday activities, personal care, mobility and social interaction that may be reasons to explore care options.</p>
-      <a class="read-more" href="post1.html">Read the Article →</a>
-    </article>
+    <section class="articles">
+      <article class="article">
+        <p class="meta">Featured care article</p>
+        <h2>5 Signs Your Elderly Parent May Need In-Home Care</h2>
+        <p>Learn about possible signs that an older loved one may need additional support, including difficulty with daily activities, changes in memory, and social withdrawal.</p>
+        <a class="read-more" href="post1.html">Read full article →</a>
+      </article>
 
-    <article class="article">
-      <div class="category">Family Support</div>
-      <h2>How Families Can Start Planning for Care</h2>
-      <p class="meta">Family wellbeing · General information</p>
-      <p>Starting with a respectful conversation, identifying everyday needs and exploring available resources can help families plan their next steps.</p>
-      <a class="read-more" href="index.html#contact">Ask About Care Guidance →</a>
-    </article>
+      <article class="article">
+        <p class="meta">Family care guidance</p>
+        <h2>How Families Can Prepare for Home Care</h2>
+        <p>Consider your loved one's daily needs, safety, preferences, available support and communication arrangements before organising home care.</p>
+        <a class="read-more" href="index.html#services">Explore our care services →</a>
+      </article>
 
-    <article class="article">
-      <div class="category">Caregiver Support</div>
-      <h2>Why Caregivers Also Need Support</h2>
-      <p class="meta">Caregiver wellbeing · General information</p>
-      <p>Caregiving can be demanding. Learning about available support, setting realistic routines and asking for help can contribute to a more sustainable care arrangement.</p>
-      <a class="read-more" href="index.html#services">Explore Our Services →</a>
-    </article>
+      <article class="article">
+        <p class="meta">Caregiver support</p>
+        <h2>Why Caregiver Support and Training Matter</h2>
+        <p>Learn why clear responsibilities, respectful communication, suitable training and safe care practices are important when supporting someone at home.</p>
+        <a class="read-more" href="index.html#services">Learn about caregiver support →</a>
+      </article>
 
-    <article class="article">
-      <div class="category">Digital Innovation</div>
-      <h2>How Digital Tools Can Support Care Communication</h2>
-      <p class="meta">Digital healthcare · General information</p>
-      <p>Well-designed digital tools can help care providers organise enquiries and improve communication. Technology should support—not replace—appropriate human judgement and professional care.</p>
-      <a class="read-more" href="index.html#services">Explore Digital Solutions →</a>
-    </article>
-  </div>
+      <article class="article">
+        <p class="meta">Digital healthcare</p>
+        <h2>How Digital Tools Can Support Care Coordination</h2>
+        <p>Discover how communication tools and digital services may help families and care providers organise enquiries and coordinate support.</p>
+        <a class="read-more" href="index.html#services">Explore digital care solutions →</a>
+      </article>
 
-  <div class="notice">
-    <strong>Need guidance with care arrangements?</strong>
-    <p>Contact Respicom Care Network to discuss family care consultancy, home care guidance, caregiver support or digital solutions.</p>
-    <a class="read-more" href="index.html#contact">Contact Our Team</a>
-  </div>
+      <article class="article">
+        <p class="meta">Family welfare</p>
+        <h2>Finding the Right Care Support for Your Family</h2>
+        <p>Understand how to discuss care needs, ask useful questions and identify the appropriate professional or service for your situation.</p>
+        <a class="read-more" href="index.html#contact">Make an enquiry →</a>
+      </article>
 
-  <p><strong>Disclaimer:</strong> Blog content is for general information and education. It is not medical or legal advice. Adoption applications, assessments and approvals must be handled by authorised authorities and qualified professionals. Consult a qualified healthcare professional about medical concerns.</p>
-</main>
+      <article class="article">
+        <p class="meta">Care information</p>
+        <h2>Understanding Child Adoption Guidance</h2>
+        <p>Families considering adoption should seek information from authorised adoption authorities and qualified professionals. Formal applications, assessments and approvals must be handled by the appropriate authorities.</p>
+        <a class="read-more" href="index.html#services">Explore family guidance →</a>
+      </article>
+    </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h2>RESPICOM CARE NETWORK</h2>
-        <p>Compassionate Care. Stronger Families. Smarter Support.</p>
-      </div>
-      <div>
-        <h3>Quick Links</h3>
-        <div class="footer-links">
-          <a href="index.html#home">Home</a>
-          <a href="index.html#services">Services</a>
-          <a href="blog.html">Blog</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
-      </div>
-      <div>
-        <h3>Contact Us</h3>
-        <p><a href="tel:+2349067366184">0906 736 6184</a></p>
-        <p><a href="https://wa.me/2349067366184">WhatsApp Us</a></p>
-        <p><a href="mailto:respicomglobalservice@gmail.com">respicomglobalservice@gmail.com</a></p>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>© <span id="year"></span> Respicom Care Network. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <section class="services" id="care-services">
+      <h2>Care and Support Services</h2>
+      <p>Respicom Care Network provides information and support across the following service areas:</p>
+      <ul>
+        <li>Family care consultancy</li>
+        <li>Home care services</li>
+        <li>Caregiver support and training</li>
+        <li>Support for care providers</li>
+        <li>Family welfare guidance</li>
+        <li>General child adoption journey guidance</li>
+        <li>AI Agent Services</li>
+        <li>WhatsApp and call support</li>
+        <li>Digital healthcare solutions</li>
+      </ul>
+      <p>Service availability and suitability depend on individual needs. Medical care and regulated services should be provided by appropriately qualified professionals.</p>
+      <a class="read-more" href="index.html#contact">Contact Respicom Care Network →</a>
+    </section>
+  </main>
+
+  <section class="contact" id="contact">
+    <h2>Contact Respicom Care Network</h2>
+    <p>Have a question about care or support services? Contact our team.</p>
+    <p><strong>Phone:</strong> <a href="tel:+2349067366184">0906 736 6184</a></p>
+    <p><strong>Email:</strong> <a href="mailto:respicomglobalservice@gmail.com">respicomglobalservice@gmail.com</a></p>
+    <p><strong>Location:</strong> Lagos, Nigeria</p>
+    <p><a href="https://wa.me/2349067366184?text=Hello%20Respicom%20Care%20Network%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Respicom Care Network. All rights reserved.</p>
+    <p>Compassionate Care. Stronger Families. Smarter Support.</p>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/2349067366184?text=Hello%20Respicom%20Care%20Network%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Contact Respicom Care Network on WhatsApp">WhatsApp Us</a>
 </body>
 </html>
+```
